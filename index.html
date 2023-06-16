@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Admin</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230616212503">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-lp>
+			<div class="header__container">
+				<a data-da=".menu__body,767.98,0" href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="form-page.html" class="menu__link menu__link--orange">Заявки</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Персонал</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Клиенты</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Склад</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__actions action-header">
+					<div class="action-header__icons">
+						<form action="#" method="POST" class="action-header__search search-header">
+							<div class="search-header__boby">
+								<input data-required type="text" name="form[email]" data-error="" placeholder="Search..." class="search-header__input">
+								<button type="submit" class="search-header__button"><svg>
+										<use xlink:href="img/icons/icons.svg#search"></use>
+									</svg></button>
+							</div>
+							<button type="button" class="search-header__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#search"></use>
+								</svg></button>
+						</form>
+						<button type="button" class="action-header__bell"><svg>
+								<use xlink:href="img/icons/icons.svg#bell-icon"></use>
+							</svg><span></span></button>
+					</div>
+					<div class="action-header__users">
+						<button class="action-header__plus"><svg>
+								<use xlink:href="img/icons/icons.svg#plus"></use>
+							</svg></button>
+						<button class="action-header__user">
+							<picture><source srcset="img/user-image.webp" type="image/webp"><img src="img/user-image.png" alt="user"></picture>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#select-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="admin">
+			<section class="admin__header header-admin">
+				<div class="header-admin__container">
+					<h1 class="header-admin__title">Заявки</h1>
+					<div class="header-admin__actions">
+						<button type="button" class="header-admin__button button">Новая заявка</button>
+					</div>
+				</div>
+			</section>
+			<div class="admin__main main-admin">
+				<div class="main-admin__container">
+					<aside class="main-admin__aside">
+						<nav class="main-admin__menu">
+							<ul class="main-admin__list">
+								<li class="main-admin__item"><a href="#" class="main-admin__link">Новые<span>5</span></a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">В работе</a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">Просчеты</a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">История</a></li>
+							</ul>
+						</nav>
+					</aside>
+					<div class="main-admin__info">
+						<form action="#" method="POST" class="tabs__search search-main">
+							<div class="search-main__boby">
+								<input data-required type="text" name="form[email]" data-error="" placeholder="Search..." class="search-main__input">
+								<button type="submit" class="search-main__button"><svg>
+										<use xlink:href="img/icons/icons.svg#search"></use>
+									</svg></button>
+							</div>
+							<button type="button" class="search-main__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#search"></use>
+								</svg></button>
+						</form>
+						<div data-tabs class="main-admin__tabs tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">Выполеннные</button>
+								<button type="button" class="tabs__title">Отмененные</button>
+								<button type="button" class="tabs__title">Удаленные</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body-table table">
+									<table class="table__wrapper">
+										<thead class="table__header header-table">
+											<tr>
+												<th class="header-table__data">Дата записи</th>
+												<th class="header-table__car">Автомобиль</th>
+												<th class="header-table__run">Пробег</th>
+												<th class="header-table__service">Услуги и материалы</th>
+												<th class="header-table__customers">Клиент</th>
+												<th class="header-table__arrow"><span></span></th>
+											</tr>
+										</thead>
+										<tbody class="table__body body-table">
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs__body-table table">
+									<table class="table__wrapper">
+										<thead class="table__header header-table">
+											<tr>
+												<th class="header-table__data">Дата записи</th>
+												<th class="header-table__car">Автомобиль</th>
+												<th class="header-table__run">Пробег</th>
+												<th class="header-table__service">Услуги и материалы</th>
+												<th class="header-table__customers">Клиент</th>
+												<th class="header-table__arrow"><span></span></th>
+											</tr>
+										</thead>
+										<tbody class="table__body body-table">
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="tabs__body-table table">
+									<table class="table__wrapper">
+										<thead class="table__header header-table">
+											<tr>
+												<th class="header-table__data">Дата записи</th>
+												<th class="header-table__car">Автомобиль</th>
+												<th class="header-table__run">Пробег</th>
+												<th class="header-table__service">Услуги и материалы</th>
+												<th class="header-table__customers">Клиент</th>
+												<th class="header-table__arrow"><span></span></th>
+											</tr>
+										</thead>
+										<tbody class="table__body body-table">
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+											<tr class="body-table__line">
+												<td class="body-table__data">
+													<p>Apr. 19</p><span class="body-table__signature">2023</span>
+												</td>
+												<td class="body-table__car">
+													<p>BMW X6, 3, 2015</p><span class="body-table__signature">SDGNKFJSACMSLDFM</span>
+												</td>
+												<td class="body-table__run">
+													<p>168 тыс км</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__secvice">
+													<p>Замена масла и фильтра в двигателе, Замена воздушного фи...</p><span class="body-table__signature"></span>
+												</td>
+												<td class="body-table__customers">
+													<p>Петко Иванов</p><a href="tel:+359879231253">+359 87 923 12 53</a>
+												</td>
+												<td class="body-table__arrow-hover">
+													<nav class="body-table__menu menu-table">
+														<ul class="menu-table__list">
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Восстановить заказ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Напечатать заказ-наряд</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Сохранить ПДФ</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">История автомобиля</a></li>
+															<li class="menu-table__item"><a class="menu-table__link" href="#">Профиль клиента</a></li>
+														</ul>
+													</nav>
+													<button class="body-table__burger" type="button"><span></span></button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<nav class="main-admin__menu-second">
+							<ul class="main-admin__list-second">
+								<li class="main-admin__item"><a href="#" class="main-admin__link main-admin__link--arrow-left"><svg>
+											<use xlink:href="img/icons/icons.svg#select-arrow"></use>
+										</svg></a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">1</a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">2</a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">3</a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">...</a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link">9</a></li>
+								<li class="main-admin__item"><a href="#" class="main-admin__link main-admin__link--arrow-right"><svg>
+											<use xlink:href="img/icons/icons.svg#select-arrow"></use>
+										</svg></a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230616212503"></script>
+</body>
+
+</html>

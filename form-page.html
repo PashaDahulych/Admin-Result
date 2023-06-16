@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Form</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20230616212503">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-lp>
+			<div class="header__container">
+				<a data-da=".menu__body,767.98,0" href="index.html" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="form-page.html" class="menu__link menu__link--orange">Заявки</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Персонал</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Клиенты</a></li>
+							<li class="menu__item"><a href="#" class="menu__link">Склад</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="header__actions action-header">
+					<div class="action-header__icons">
+						<form action="#" method="POST" class="action-header__search search-header">
+							<div class="search-header__boby">
+								<input data-required type="text" name="form[email]" data-error="" placeholder="Search..." class="search-header__input">
+								<button type="submit" class="search-header__button"><svg>
+										<use xlink:href="img/icons/icons.svg#search"></use>
+									</svg></button>
+							</div>
+							<button type="button" class="search-header__icon"><svg>
+									<use xlink:href="img/icons/icons.svg#search"></use>
+								</svg></button>
+						</form>
+						<button type="button" class="action-header__bell"><svg>
+								<use xlink:href="img/icons/icons.svg#bell-icon"></use>
+							</svg><span></span></button>
+					</div>
+					<div class="action-header__users">
+						<button class="action-header__plus"><svg>
+								<use xlink:href="img/icons/icons.svg#plus"></use>
+							</svg></button>
+						<button class="action-header__user">
+							<picture><source srcset="img/user-image.webp" type="image/webp"><img src="img/user-image.png" alt="user"></picture>
+							<svg>
+								<use xlink:href="img/icons/icons.svg#select-arrow"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="form-page">
+			<div class="form-page__header header-form-page">
+				<div class="header-form-page__container">
+					<a href="#" class="header-form-page__link"><svg>
+							<use xlink:href="img/icons/icons.svg#select-arrow"></use>
+						</svg><span>Редактирование #124631</span></a>
+					<div class="header-form-page__actions">
+						<button type="submit" class="header-form-page__button button">
+							Сохранить изменения
+						</button>
+						<button type="reset" class="header-form-page__trash-button">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#trash"></use>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+			<section class="form-page__about-car about-car">
+				<div class="about-car__container">
+					<form class="about-car__forma" action="files/sendmail/sendmail.php" method="POST">
+						<h1 class="about-car__title">Данные автомобиля</h1>
+						<div class="about-car__line">
+							<select name="form[]" data-class-modif="form">
+								<option value="1" selected>BMW</option>
+								<option value="2">Audi</option>
+								<option value="3">Fiat</option>
+								<option value="4">WW</option>
+							</select>
+						</div>
+						<div class="about-car__line">
+							<select name="form[]" data-class-modif="form">
+								<option value="1" selected>X5</option>
+								<option value="2">M5</option>
+								<option value="3">X6</option>
+								<option value="4">320</option>
+							</select>
+						</div>
+						<div class="about-car__wrapper-line">
+							<div class="about-car__line">
+								<select name="form[]" data-class-modif="form-type-first">
+									<option value="1" selected>3.2</option>
+									<option value="2">2.0</option>
+									<option value="3">3.0</option>
+									<option value="4">4.0</option>
+								</select>
+							</div>
+							<div class="about-car__line">
+								<select name="form[]" data-class-modif="form-year">
+									<option value="1" selected>2014</option>
+									<option value="2">2015</option>
+									<option value="3">2016</option>
+									<option value="4">2017</option>
+								</select>
+							</div>
+						</div>
+						<div class="about-car__inputs">
+							<div class="about-car__reset">
+								<input type="text" name="form[run]" data-error="" autocomplete="off" placeholder="125 тыс. км." />
+								<button type="reset">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#delete"></use>
+									</svg>
+								</button>
+							</div>
+							<div class="about-car__reset">
+								<input type="text" name="form[run]" data-error="" autocomplete="off" placeholder="AHG39SDF23SDF" />
+								<button type="reset">
+									<svg>
+										<use xlink:href="img/icons/icons.svg#delete"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="about-car__line about-car__line--textarea">
+							<textarea name="message" autocomplete="off" id="message" placeholder="Textarea"></textarea>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20230616212503"></script>
+</body>
+
+</html>
